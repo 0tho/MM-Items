@@ -21,13 +21,17 @@ plugins {
 }
 */
 version = "1.10.2-0.0.1"
-group= "me.otho.metamods.blocks" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "MM-Blocks"
+group= "me.otho.metamods.items" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "MM-Items"
 
 minecraft {
     version = "1.10.2-12.18.1.2011"
 
-    runDir = "run"
+    if(file('../run').exists()) {
+      runDir = "../run"
+    } else {
+      runDir = "run"
+    }
 
     // the mappings can be changed at any time, and must be in the following format.
     // snapshot_YYYYMMDD   snapshot are built nightly.
