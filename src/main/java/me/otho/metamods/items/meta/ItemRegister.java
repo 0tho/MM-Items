@@ -11,7 +11,7 @@ public class ItemRegister implements IRegister {
 	@Override
 	public void register(JsonObject obj) {
 		System.out.println( "Registering: " + obj.get("id").toString());
-		MmItem newItem = new MmItem( obj.get("id").toString() );
+		MmItem newItem = new MmItem( obj.get("id").getAsString() );
 		
 		GameRegistry.register(newItem);
 		newItem.registerItemModel();

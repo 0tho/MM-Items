@@ -13,6 +13,7 @@ public class MmItem extends Item {
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
+		this.setCreativeTab(CreativeTabs.MISC);
 	}
 
 	public void registerItemModel() {
