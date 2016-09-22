@@ -1,4 +1,4 @@
-package me.otho.metamods.items.mod;
+package me.otho.metamods.items.mod.items;
 
 import me.otho.metamods.items.MmItems;
 import net.minecraft.creativetab.CreativeTabs;

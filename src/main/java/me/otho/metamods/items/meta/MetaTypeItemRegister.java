@@ -4,7 +4,7 @@ import com.google.gson.JsonObject;
 
 import me.otho.metamods.core.api.IMetaTypeRegister;
 import me.otho.metamods.core.meta.CreativeTabHandler;
-import me.otho.metamods.items.mod.MmItem;
+import me.otho.metamods.items.mod.items.MmItem;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MetaTypeItemRegister implements IMetaTypeRegister {
