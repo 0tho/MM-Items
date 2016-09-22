@@ -5,7 +5,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import me.otho.metamods.core.registry.RegisterHandler;
-import me.otho.metamods.items.meta.ItemRegister;
+import me.otho.metamods.items.meta.MetaTypeItemRegister;
 import me.otho.metamods.items.proxy.CommonProxy;
 
 @Mod(modid = MmItems.MOD_ID, name = MmItems.MOD_NAME, version = MmItems.VERSION, dependencies="before:metamod-core")
@@ -26,6 +26,6 @@ public class MmItems
     public void preinit(FMLPreInitializationEvent event)
     {
         // Add new register type
-        RegisterHandler.addRegisterType(MOD_ID + "." + "item", new ItemRegister() );
+        RegisterHandler.addMetaTypeRegister(MOD_ID + "." + "item", new MetaTypeItemRegister() );
     }
 }

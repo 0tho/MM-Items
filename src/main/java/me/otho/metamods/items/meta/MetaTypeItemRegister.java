@@ -2,12 +2,12 @@ package me.otho.metamods.items.meta;
 
 import com.google.gson.JsonObject;
 
+import me.otho.metamods.core.api.IMetaTypeRegister;
 import me.otho.metamods.core.meta.CreativeTabHandler;
-import me.otho.metamods.core.registry.IRegister;
 import me.otho.metamods.items.mod.MmItem;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class ItemRegister implements IRegister {
+public class MetaTypeItemRegister implements IMetaTypeRegister {
 
 	@Override
 	public void register(JsonObject obj) {
