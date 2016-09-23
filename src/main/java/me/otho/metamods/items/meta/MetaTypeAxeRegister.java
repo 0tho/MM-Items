@@ -1,13 +1,11 @@
 package me.otho.metamods.items.meta;
 
-import com.google.gson.JsonObject;
-
 import me.otho.metamods.core.api.IMetaTypeRegister;
 
 public class MetaTypeAxeRegister implements IMetaTypeRegister {
 
 	@Override
-	public void register(JsonObject obj) {
+	public void register(Object obj) {
 		// TODO Auto-generated method stub
 
 	}
@@ -16,6 +14,12 @@ public class MetaTypeAxeRegister implements IMetaTypeRegister {
 	public int getPriority() {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Class<?> getReaderClass() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

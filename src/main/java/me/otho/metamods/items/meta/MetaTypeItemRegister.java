@@ -1,7 +1,5 @@
 package me.otho.metamods.items.meta;
 
-import com.google.gson.JsonObject;
-
 import me.otho.metamods.core.api.IMetaTypeRegister;
 import me.otho.metamods.core.meta.CreativeTabHandler;
 import me.otho.metamods.items.mod.items.MmItem;
@@ -9,15 +7,19 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MetaTypeItemRegister implements IMetaTypeRegister {
 
+	class ItemReader {
+		String id;
+		int maxStackSize;
+		String creativeTab;
+	}
+	
 	@Override
-	public void register(JsonObject obj) {
-		String id = obj.get("id").getAsString();
-		int maxStackSize = obj.has("maxStackSize") ? obj.get("maxStackSize").getAsInt() : 64;
-		String creativeTab = obj.has("creativeTab") ? obj.get("creativeTab").getAsString() : "misc";
+	public void register(Object obj) {
+		ItemReader data = (ItemReader) obj;
 		
-		MmItem newItem = new MmItem( id );
-		newItem.setMaxStackSize(maxStackSize);
-		newItem.setCreativeTab(CreativeTabHandler.getTab(creativeTab));
+		MmItem newItem = new MmItem( data.id );
+		newItem.setMaxStackSize(data.maxStackSize);
+		newItem.setCreativeTab(CreativeTabHandler.getTab(data.creativeTab));
 		
 		GameRegistry.register(newItem);
 		newItem.registerItemModel();
@@ -26,6 +28,11 @@ public class MetaTypeItemRegister implements IMetaTypeRegister {
 	@Override
 	public int getPriority() {
 		return 0;
+	}
+
+	@Override
+	public Class<?> getReaderClass() {
+		return ItemReader.class;
 	}
 
 }

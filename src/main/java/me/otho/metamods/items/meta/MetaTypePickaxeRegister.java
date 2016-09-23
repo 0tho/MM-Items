@@ -1,31 +1,24 @@
 package me.otho.metamods.items.meta;
 
-import com.google.gson.JsonObject;
-
 import me.otho.metamods.core.api.IMetaTypeRegister;
-import me.otho.metamods.core.meta.CreativeTabHandler;
-import me.otho.metamods.items.mod.items.MmItem;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class MetaTypePickaxeRegister implements IMetaTypeRegister {
 
 	@Override
-	public void register(JsonObject obj) {
-		String id = obj.get("id").getAsString();
-		int maxStackSize = obj.has("maxStackSize") ? obj.get("maxStackSize").getAsInt() : 64;
-		String creativeTab = obj.has("creativeTab") ? obj.get("creativeTab").getAsString() : "misc";
-		
-		MmItem newItem = new MmItem( id );
-		newItem.setMaxStackSize(maxStackSize);
-		newItem.setCreativeTab(CreativeTabHandler.getTab(creativeTab));
-		
-		GameRegistry.register(newItem);
-		newItem.registerItemModel();
+	public void register(Object obj) {
+		// TODO Auto-generated method stub
 	}
 
 	@Override
 	public int getPriority() {
+		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public Class<?> getReaderClass() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
