@@ -27,7 +27,7 @@ archivesBaseName = "MM-Items"
 minecraft {
     version = "1.10.2-12.18.1.2011"
 
-    if(file('../run').exists()) {
+    if(file("../run").exists()) {
       runDir = "../run"
     } else {
       runDir = "run"
