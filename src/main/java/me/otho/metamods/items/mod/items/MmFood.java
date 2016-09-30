@@ -2,7 +2,7 @@ package me.otho.metamods.items.mod.items;
 
 import javax.annotation.Nullable;
 
-import me.otho.metamods.core.jsonReader.common.ConfigItemDrop;
+import me.otho.metamods.core.jsonreader.common.ConfigItemDrop;
 import me.otho.metamods.items.meta.ConfigPotionEffect;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,8 +18,8 @@ import net.minecraftforge.fml.common.registry.ForgeRegistries;
 
 public class MmFood extends ItemFood {
 
-	  private ConfigItemDrop[] dropItems;
 	  private EnumAction useAction = EnumAction.EAT;
+	  private ConfigItemDrop[] dropItems;
 	  private ConfigPotionEffect[] effectsArray;
 
 	  public MmFood(int healAmount, float saturationModifier, boolean isWolfsFavoriteMeat) {

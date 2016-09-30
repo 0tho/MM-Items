@@ -5,6 +5,7 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import me.otho.metamods.core.registry.RegisterHandler;
+import me.otho.metamods.items.meta.MetaTypeAxeRegister;
 import me.otho.metamods.items.meta.MetaTypeFoodRegister;
 import me.otho.metamods.items.meta.MetaTypeItemRegister;
 import me.otho.metamods.items.proxy.CommonProxy;
@@ -29,5 +30,6 @@ public class MmItems
         // Add new register type
         RegisterHandler.addMetaTypeRegister(MOD_ID + "." + "item", new MetaTypeItemRegister() );
         RegisterHandler.addMetaTypeRegister(MOD_ID + "." + "food", new MetaTypeFoodRegister() );
+        RegisterHandler.addMetaTypeRegister(MOD_ID + "." + "axe", new MetaTypeAxeRegister() );
     }
 }

@@ -1,7 +1,7 @@
 package me.otho.metamods.items.meta;
 
 import me.otho.metamods.core.api.IMetaTypeRegister;
-import me.otho.metamods.core.jsonReader.common.ConfigItemDrop;
+import me.otho.metamods.core.jsonreader.common.ConfigItemDrop;
 import me.otho.metamods.core.meta.CreativeTabHandler;
 import me.otho.metamods.items.MmItems;
 import me.otho.metamods.items.mod.items.MmFood;
@@ -22,8 +22,6 @@ public class MetaTypeFoodRegister implements IMetaTypeRegister {
 		public ConfigItemDrop[] dropItems;
 
 		public ConfigPotionEffect[] potionEffects = {};
-		
-		public FoodReader () {}
 	}
 
 	@Override

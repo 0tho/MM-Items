@@ -1,0 +1,43 @@
+{
+  "id": "newAxe",
+  "metaType": "metamod-items.axe",
+  "creativeTab": "customTab",
+  "harvestLevel": 1,
+  "durability": 10,
+  "efficiencyOnProperMaterial": 10.0,
+  "damageVsEntity": 1,
+  "enchantability": 1,
+
+  "onHitUserEffects": [
+    {
+      "effectId": "minecraft:speed",
+    	"potionDuration": 30,
+    	"potionAmplifier": 0,
+    	"potionEffectProbability": 1
+    }
+  ],
+  "onHitTargetEffects": [
+    {
+      "effectId": "minecraft:slowness",
+    	"potionDuration": 30,
+    	"potionAmplifier": 0,
+    	"potionEffectProbability": 1
+    }
+  ],
+  "wearEffects": [
+    {
+      "effectId": "minecraft:regeneration",
+    	"potionDuration": 30,
+    	"potionAmplifier": 0,
+    	"potionEffectProbability": 1
+    },
+    {
+      "effectId": "minecraft:strength",
+    	"potionDuration": 30,
+    	"potionAmplifier": 0,
+    	"potionEffectProbability": 1
+    }
+  ],
+  "breaks": false,
+  "dropsOnBreak": []
+}
