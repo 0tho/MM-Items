@@ -19,10 +19,6 @@ install:
   - ./gradlew setupCIWorkspace
 
 script:
-  - mkdir -p ./run/config/metamod-core/configs/
-  - cp ./tests/configs/* ./run/config/metamod-core/configs/
-  # check if the game does not break with some configs
-  - ./gradlew runClient
   - ./gradlew build
 
 # Clean up after Gradle
