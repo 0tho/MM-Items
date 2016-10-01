@@ -1,3 +1,9 @@
+allprojects {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
 
 // For those who want the bleeding edge
 buildscript {
@@ -43,6 +49,9 @@ minecraft {
 }
 
 dependencies {
+    // Compile MM-Core
+    compile 'com.github.0tho:MM-Core:master-SNAPSHOT'
+
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"
