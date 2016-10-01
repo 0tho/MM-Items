@@ -1,4 +1,4 @@
-# Metamod-Items
+# Metamod-Items ![travis](https://travis-ci.org/0tho/MM-Items.svg?branch=master)
 
 MM-Items uses MM-Core to create a json interface for registering your own items in minecraft.
 
