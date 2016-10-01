@@ -1,0 +1,44 @@
+#Used Agricraft travis.yml as base
+branches:
+  only:
+    - master
+    - develop
+
+language: java
+
+matrix:
+  include:
+    - jdk: oraclejdk8
+
+sudo: false
+
+before_install:
+  - chmod +x gradlew
+
+install:
+  - ./gradlew setupCIWorkspace
+
+script:
+  - mkdir -p ./run/config/metamod-core/configs/
+  - cp ./tests/configs/* ./run/config/metamod-core/configs/
+  # check if the game does not break with some configs
+  - ./gradlew runClient
+  - ./gradlew build
+
+# Clean up after Gradle
+env:
+  global:
+    TERM=dumb
+
+# So the cache doesn't get rebuilt every time.
+before_cache:
+  - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json
+  - rm -f $HOME/.gradle/caches/minecraft/ForgeVersion.json.etag
+  - rm -rf $HOME/.gradle/caches/minecraft/deobfedDeps
+
+# Cache libs, as to improve speed.
+cache:
+  directories:
+    - $HOME/.gradle/caches
+    - $HOME/.gradle/wrapper
